@@ -8,7 +8,7 @@ import { getUserSubscription } from "@/db/queries";
 
 const returnUrl = absoluteUrl('/shop');
 
-export const createStripeUrl = async () =>{
+export const  createStripeUrl = async () =>{
     const { userId } = await auth();
     const user = await currentUser();
     if(!userId || !user){
