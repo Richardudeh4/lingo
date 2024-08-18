@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation';
 import React from 'react'
 import { Items } from './items';
 import { Promo } from '@/components/promo';
+import { Quests } from '@/components/quest';
 
 const ShopPage = async () => {
     const userProgressData = getUserProgress();
@@ -29,6 +30,7 @@ const ShopPage = async () => {
       !isPro && (
         <Promo/>
       )} 
+      <Quests points={userProgress.points}/>
         </StickWrapper>
             <FeedWrapper>
                 <div className='w-full flex flex-col items-center'>
